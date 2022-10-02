@@ -18,6 +18,5 @@ Name | Description | Type | Required|Default
 `role_name`|The name of an IAM role name.|string|No|`"ng-cor-iam-role"`
 `role_description`|(Forces new resource) Description of the IAM Role.|string|No|`"IAM Role for creating Attachments to ngena AWS Cloud Gateway"`
 `tags`|Key-value map of resource tags.|map(any)|No|`{}`
-`red-cedges` |Day0 config for RED cEdges.|map | `{}`
 `policy_tags`|Key-value map of resource tags. Can be used if dedicated tags for policy should be configured.|map(any)|No|`{}`
 `role_tags`|Key-value map of resource tags.Can be used if dedicated tags for the Role should be configured.|map(any)|No|`{}`
