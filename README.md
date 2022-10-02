@@ -3,7 +3,7 @@
 #### Inputs
 
 Name | Description | Type | Required|Default
----- | ----------- | ---- |-------  |-------
+---- | ----------- | ---- |---  |-------
 `external_id` |Unique identifier used by ngena to assume a role in customer account (used in IAM Role Policy template).| list(string) |Yes| `N/A`
 `ngena_api_user_arn` |IAM user Principal ARN    whhich can assume a role in customer account (used in IAM Role Policy template).|string |Yes| `N/A`
 `policy`|The policy document. This is a JSON formatted string.|object|No| `null`
