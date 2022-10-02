@@ -33,7 +33,7 @@ Name | Description | Type | Required|Default
 Name       | Description
 ----       | -----------
 `document_policy_cor_policy_json`|Default Policy document for IAM Policy to support ngena CoR.
-`document_policy_cor_role_json`|Default Policy document for Assume role Policy Policy to support ngena CoR.
+`document_policy_cor_role_json`|Default Policy document for Assume role Policy to support ngena CoR.
 `iam-policy-arn`|ARN of IAM Policy for ngena AWS Cloud Gateway provisioning.
 `iam-role-arn`|ARN of IAM Role for ngena AWS Cloud Gateway provisioning.
 
