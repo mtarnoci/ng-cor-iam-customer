@@ -7,8 +7,7 @@ IAM Policies in ngena design are defined following the Principle of Least Privil
 
 ![IAM Role-based access: High Level Overview](./documentation/pictures/assume_role.png)
 
-
-#### Inputs
+### Inputs
 
 Name | Description | Type | Required|Default
 ---- | ----------- | ---- |-------  |-------
@@ -28,3 +27,19 @@ Name | Description | Type | Required|Default
 `tags`|Key-value map of resource tags.|map(any)|No|`{}`
 `policy_tags`|Key-value map of resource tags. Can be used if dedicated tags for policy should be configured.|map(any)|No|`{}`
 `role_tags`|Key-value map of resource tags.Can be used if dedicated tags for the Role should be configured.|map(any)|No|`{}`
+
+### Outputs
+
+Name       | Description
+----       | -----------
+`document_policy_cor_policy_json`|Default Policy document for IAM Policy to support ngena CoR.
+`document_policy_cor_role_json`|Default Policy document for Assume role Policy Policy to support ngena CoR.
+`iam-policy-arn`|ARN of IAM Policy for ngena AWS Cloud Gateway provisioning
+`iam-role-arn`|ARN of IAM Role for ngena AWS Cloud Gateway provisioning
+
+### Requirements, Providers
+
+Name       | Version
+-----      |--------
+terraform  | ">=1.3"
+aws        | "~> 4.19.0

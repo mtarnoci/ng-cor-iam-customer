@@ -2,6 +2,7 @@
 #ignore the lab configs directory
 .DS_Store
 00_*.*
+provider.tf
 test*.*
 TEST*.*
 to_do.txt
