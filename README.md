@@ -5,7 +5,27 @@ IAM Role-based access is then used to deploy all ngena AWS Cloud Gateway resourc
 Permissions to AWS resources are defined by IAM Policy. A policy is an object in AWS that, when associated with an identity or resource, defines their permissions. AWS evaluates these policies when an IAM Principal (user or role) makes a request. Permissions in the policies determine whether the request is allowed or denied.
 IAM Policies in ngena design are defined following the Principle of Least Privilege (PoLP), meaning any user, program, or process should have only the bare minimum privileges necessary to perform its function. Least privilege is also referred to as role-based access or need-to-know access and falls under AWS Identity and Access Management policies.
 
+&nbsp;
+&nbsp;
+
 ![IAM Role-based access: High Level Overview](./documentation/pictures/assume_role.png)
+
+&nbsp;
+&nbsp;
+
+Customer environment (Virtual Private Cloud - VPC) – called Host VPC, is deployed under Customer Owned AWS Account. In order to connect Host VPC to the ngena AWS Cloud Gateway, Transit Gateway VPC Attachment needs to be configured under Customer Owned AWS Account. To achieve this, ngena orchestration needs permissions to do it.
+
+&nbsp;
+
+In CoR Application, customer provides ARN of IAM Role with attached appropriate IAM Policy and External ID configured in Assume Role Policy.
+
+&nbsp;
+&nbsp;
+
+![AWS Cloud Account: High Level Overview](./documentation/pictures/cloud_account_aws.png)
+
+&nbsp;
+&nbsp;
 
 ### Inputs
 
