@@ -15,6 +15,37 @@ IAM Policies in ngena design are defined following the Principle of Least Privil
 
 Customer environment (Virtual Private Cloud - VPC) – called Host VPC, is deployed under Customer Owned AWS Account. In order to connect Host VPC to the ngena AWS Cloud Gateway, Transit Gateway VPC Attachment needs to be configured under Customer Owned AWS Account. To achieve this, ngena orchestration needs permissions to do it.
 
+RAM:
+* AcceptResourceShareInvitation
+* DisassociateResourceShare
+* GetResourceShareInvitations
+* ListResources
+* GetResourceShares
+
+EC2:
+* DescribeAccountAttributes 
+* DescribeTags
+* CreateTags
+* DescribeVpcs
+* DescribeSubnets
+* DescribeTransitGateways
+* DescribeTransitGatewayAttachments
+* DescribeTransitGatewayVpcAttachments
+* CreateTransitGatewayVpcAttachment
+* DescribeRouteTables
+* CreateRoute
+* DeleteRoute
+
+During lifecycle, resources created by ngena orchestration workflow needs to be maintained. Each resource created by ngena AWS Cloud Gateway workflow is Tagged by Tag:
+
+				key: ngena value: sdwan
+
+To avoid undesirable deletion of resources not managed by ngena, policy allow to delete only resources tagged by ngena orchestration by this tag.
+In particular:
+
+EC2:
+* DeleteTransitGatewayVpcAttachment
+
 &nbsp;
 
 In CoR Application, customer provides ARN of IAM Role with attached appropriate IAM Policy and External ID configured in Assume Role Policy.
