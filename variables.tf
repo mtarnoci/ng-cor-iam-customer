@@ -1,11 +1,11 @@
 
 variable "external_id" {
-  description = "Unique identifier used by ngena to assume a role in customer account (used in IAM Role Policy template)"
+  description = "Anyone who wants to assume the role must be a principal in the role and must include the correct External ID. (used in IAM Role Policy template)"
   type        = list(string)
 }
 
 variable "ngena_api_user_arn" {
-  description = "Unique identifier used by ngena to assume a role in customer account (used in IAM Role Policy template)"
+  description = "Unique identifier of user used by ngena to assume a role in customer account (used in IAM Role Policy template)"
   type        = list(string)
 }
 
